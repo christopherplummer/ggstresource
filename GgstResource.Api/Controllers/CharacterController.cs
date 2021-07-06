@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
+using GgstResource.Api.Interfaces;
 using GgstResource.Api.Models.Request;
 using GgstResource.Models;
 using Microsoft.AspNetCore.Http;
@@ -12,11 +14,17 @@ namespace GgstResource.Api.Controllers
     [Route("characters")]
     public class CharacterController
     {
+        private readonly ICharacterRepository _repository;
+        public CharacterController(ICharacterRepository repository)
+        {
+            _repository = repository;
+        }
+        
         [HttpGet]
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(List<Character>))]
-        public IEnumerable<Character> GetAll()
+        public async Task<IEnumerable<Character>> GetAll()
         {
-            return new List<Character>();
+            return await _repository.GetAll();
         }
         
         [HttpGet]
@@ -24,18 +32,18 @@ namespace GgstResource.Api.Controllers
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(Character))]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public Character GetByReference(string reference)
+        public async Task<Character> GetByReference(string reference)
         {
-            return new Character();
+            return await _repository.GetByReference(reference);
         }
         
         [HttpPost]
         [ProducesResponseType(StatusCodes.Status201Created, Type = typeof(Character))]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status422UnprocessableEntity)]
-        public Character Create(CharacterCreateRequest request)
+        public async Task<Character> Create(CharacterCreateRequest request)
         {
-            return new Character();
+            return await _repository.Create(request);
         }
         
         [HttpPut]

@@ -1,7 +1,4 @@
-C:\Projects\GgstResource\GgstResource.Models\bin\Debug\net5.0\GgstResource.Models.exe
 C:\Projects\GgstResource\GgstResource.Models\bin\Debug\net5.0\GgstResource.Models.deps.json
-C:\Projects\GgstResource\GgstResource.Models\bin\Debug\net5.0\GgstResource.Models.runtimeconfig.json
-C:\Projects\GgstResource\GgstResource.Models\bin\Debug\net5.0\GgstResource.Models.runtimeconfig.dev.json
 C:\Projects\GgstResource\GgstResource.Models\bin\Debug\net5.0\GgstResource.Models.dll
 C:\Projects\GgstResource\GgstResource.Models\bin\Debug\net5.0\ref\GgstResource.Models.dll
 C:\Projects\GgstResource\GgstResource.Models\bin\Debug\net5.0\GgstResource.Models.pdb
@@ -13,4 +10,3 @@ C:\Projects\GgstResource\GgstResource.Models\obj\Debug\net5.0\GgstResource.Model
 C:\Projects\GgstResource\GgstResource.Models\obj\Debug\net5.0\GgstResource.Models.dll
 C:\Projects\GgstResource\GgstResource.Models\obj\Debug\net5.0\ref\GgstResource.Models.dll
 C:\Projects\GgstResource\GgstResource.Models\obj\Debug\net5.0\GgstResource.Models.pdb
-C:\Projects\GgstResource\GgstResource.Models\obj\Debug\net5.0\GgstResource.Models.genruntimeconfig.cache

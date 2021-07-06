@@ -1,6 +1,5 @@
 C:\Projects\GgstResource\GgstResource.Api\bin\Debug\net5.0\appsettings.Development.json
 C:\Projects\GgstResource\GgstResource.Api\bin\Debug\net5.0\appsettings.json
-C:\Projects\GgstResource\GgstResource.Api\bin\Debug\net5.0\GgstResource.Models.exe
 C:\Projects\GgstResource\GgstResource.Api\bin\Debug\net5.0\GgstResource.Api.exe
 C:\Projects\GgstResource\GgstResource.Api\bin\Debug\net5.0\GgstResource.Api.deps.json
 C:\Projects\GgstResource\GgstResource.Api\bin\Debug\net5.0\GgstResource.Api.runtimeconfig.json
@@ -38,3 +37,4 @@ C:\Projects\GgstResource\GgstResource.Api\obj\Debug\net5.0\GgstResource.Api.dll
 C:\Projects\GgstResource\GgstResource.Api\obj\Debug\net5.0\ref\GgstResource.Api.dll
 C:\Projects\GgstResource\GgstResource.Api\obj\Debug\net5.0\GgstResource.Api.pdb
 C:\Projects\GgstResource\GgstResource.Api\obj\Debug\net5.0\GgstResource.Api.genruntimeconfig.cache
+C:\Projects\GgstResource\GgstResource.Api\bin\Debug\net5.0\Npgsql.dll

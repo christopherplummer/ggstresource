@@ -11,6 +11,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using GgstResource.Api.Interfaces;
+using GgstResource.Api.Repositories;
 
 namespace GgstResource.Api
 {
@@ -26,6 +28,7 @@ namespace GgstResource.Api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddScoped<ICharacterRepository, CharacterRepository>();
 
             services.AddControllers();
             services.AddSwaggerGen(c =>
