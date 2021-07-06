@@ -1,6 +1,6 @@
 ﻿namespace GgstResource.Api.Postgres.SqlStrings
 {
-    public class CharacterSql
+    public static class CharacterSql
     {
         public const string GetAll = "SELECT * FROM public.characters;";
         public const string GetById = "SELECT * FROM public.characters WHERE reference = @reference;";

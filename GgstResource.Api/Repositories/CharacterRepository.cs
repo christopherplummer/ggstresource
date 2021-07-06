@@ -23,21 +23,20 @@ namespace GgstResource.Api.Repositories
         
         public async Task<List<Character>> GetAll()
         {
-            var connection = new NpgsqlConnection(_connectionString);
+            var resources = new List<Character>();
+            await using var connection = new NpgsqlConnection(_connectionString);
             try
             {
                 await connection.OpenAsync();
                 var command = CharacterCommandHelper.GetAll(connection);
-                var response = new List<Character>();
                 var reader = await command.ExecuteReaderAsync();
                 while (await reader.ReadAsync())
                 {
                     if (!reader.HasRows) continue;
                     var character = await ReadCharacter(reader, 2);
-                    response.Add(character);
+                    if (character != null) resources.Add(character);
                 }
-
-                return response;
+                await reader.CloseAsync();
             }
             catch (Exception e)
             {
@@ -48,24 +47,25 @@ namespace GgstResource.Api.Repositories
             {
                 await connection.CloseAsync();
             }
+
+            return resources;
         }
 
         public async Task<Character> GetByReference(string reference)
         {
-            var connection = new NpgsqlConnection(_connectionString);
+            Character resource = null;
+            await using var connection = new NpgsqlConnection(_connectionString);
             try
             {
-                var character = new Character();
                 await connection.OpenAsync();
                 var command = CharacterCommandHelper.GetByReference(connection, reference);
                 var reader = await command.ExecuteReaderAsync();
                 while (await reader.ReadAsync())
                 {
                     if (!reader.HasRows) continue;
-                    character = await ReadCharacter(reader, 2);
+                    resource = await ReadCharacter(reader, 2);
                 }
-
-                return character;
+                await reader.CloseAsync();
             }
             catch (Exception e)
             {
@@ -76,24 +76,28 @@ namespace GgstResource.Api.Repositories
             {
                 await connection.CloseAsync();
             }
+
+            return resource;
         }
 
         public async Task<Character> Create(CharacterCreateRequest request)
         {
-            var connection = new NpgsqlConnection(_connectionString);
+            Character resource = null;
+            await using var connection = new NpgsqlConnection(_connectionString);
             try
             {
-                var tempCharacter = new Character { Name = request.Name, Reference = request.Reference};
+                var newCharacter = new Character { Name = request.Name, Reference = request.Reference, Version = 0, CreatedAt = DateTime.UtcNow, UpdatedAt = DateTime.UtcNow};
                 await connection.OpenAsync();
-                var command = CharacterCommandHelper.Create(connection, tempCharacter);
+                var command = CharacterCommandHelper.Create(connection, newCharacter);
                 var reader = await command.ExecuteReaderAsync();
                 while (await reader.ReadAsync())
                 {
                     if (!reader.HasRows) continue;
-                    tempCharacter = await ReadCharacter(reader, 0);
+                    resource = await ReadCharacter(reader, 0);
                 }
 
-                return tempCharacter;
+                await reader.CloseAsync();
+                return resource;
             }
             catch (Exception e)
             {
