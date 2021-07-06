@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "E/WFMPmxQ3FHe/cRLJSw3eiLY9kuGCBa+V0q7lsn+S2tTCxCGF+tdOSzADht6MUL4eFmikkYUh4Nc/N2ElMncg==",
+  "success": true,
+  "projectFilePath": "C:\\Projects\\GgstResource\\GgstResource.DataAccess\\GgstResource.DataAccess.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Chris\\.nuget\\packages\\npgsql\\6.0.0-preview5\\npgsql.6.0.0-preview5.nupkg.sha512",
+    "C:\\Users\\Chris\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\5.0.0\\system.runtime.compilerservices.unsafe.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
