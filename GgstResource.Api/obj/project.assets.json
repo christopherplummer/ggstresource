@@ -225,6 +225,20 @@
           }
         }
       },
+      "GgstResource.DataAccess/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "GgstResource.Models": "1.0.0",
+          "Npgsql": "6.0.0-preview5"
+        },
+        "compile": {
+          "bin/placeholder/GgstResource.DataAccess.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/GgstResource.DataAccess.dll": {}
+        }
+      },
       "GgstResource.Models/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
@@ -662,6 +676,11 @@
         "version.txt"
       ]
     },
+    "GgstResource.DataAccess/1.0.0": {
+      "type": "project",
+      "path": "../GgstResource.DataAccess/GgstResource.DataAccess.csproj",
+      "msbuildProject": "../GgstResource.DataAccess/GgstResource.DataAccess.csproj"
+    },
     "GgstResource.Models/1.0.0": {
       "type": "project",
       "path": "../GgstResource.Models/GgstResource.Models.csproj",
@@ -670,6 +689,7 @@
   },
   "projectFileDependencyGroups": {
     "net5.0": [
+      "GgstResource.DataAccess >= 1.0.0",
       "GgstResource.Models >= 1.0.0",
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 5.0.1",
       "Microsoft.AspNetCore.Authentication.OpenIdConnect >= 5.0.1",
@@ -712,6 +732,9 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
+            "C:\\Projects\\GgstResource\\GgstResource.DataAccess\\GgstResource.DataAccess.csproj": {
+              "projectPath": "C:\\Projects\\GgstResource\\GgstResource.DataAccess\\GgstResource.DataAccess.csproj"
+            },
             "C:\\Projects\\GgstResource\\GgstResource.Models\\GgstResource.Models.csproj": {
               "projectPath": "C:\\Projects\\GgstResource\\GgstResource.Models\\GgstResource.Models.csproj"
             }

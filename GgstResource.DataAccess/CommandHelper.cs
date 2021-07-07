@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Text.Json;
+﻿using System.Text.Json;
 using GgstResource.Models;
 using Npgsql;
 using NpgsqlTypes;
@@ -34,9 +33,14 @@ namespace GgstResource.DataAccess
             return command;
         }
         
-        public NpgsqlCommand Update(T data, NpgsqlConnection connection)
+        public NpgsqlCommand Update(T data, long updatedVersion, string resourceToString, NpgsqlConnection connection)
         {
-            return new(_sqlStrings.GetAll, connection);
+            var command = new NpgsqlCommand(_sqlStrings.Update, connection);
+            command.Parameters.Add(Constants.Reference, NpgsqlDbType.Varchar).Value = data.Reference;
+            command.Parameters.Add(Constants.Version, NpgsqlDbType.Bigint).Value = updatedVersion;
+            command.Parameters.Add(Constants.Data, NpgsqlDbType.Json).Value = resourceToString;
+            command.Parameters.Add(Constants.UpdatedAt, NpgsqlDbType.Timestamp).Value = data.UpdatedAt;
+            return command;
         }
     }
 }

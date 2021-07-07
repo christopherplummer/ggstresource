@@ -12,6 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\GgstResource.DataAccess\GgstResource.DataAccess.csproj" />
     <ProjectReference Include="..\GgstResource.Models\GgstResource.Models.csproj" />
   </ItemGroup>
 

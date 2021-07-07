@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using GgstResource.Api.Interfaces;
 using GgstResource.Api.Models.Request;
 using GgstResource.Api.Postgres;
+using GgstResource.DataAccess;
 using GgstResource.Models;
 using Microsoft.Extensions.Configuration;
 using Npgsql;
@@ -15,10 +16,12 @@ namespace GgstResource.Api.Repositories
     public class CharacterRepository : ICharacterRepository
     {
         private readonly string _connectionString;
+        private readonly CommandHelper<Character> _commandHelper;
 
         public CharacterRepository(IConfiguration configuration)
         {
             _connectionString = configuration.GetConnectionString("GgstResource");
+            _commandHelper = new CommandHelper<Character>("character");
         }
         
         public async Task<List<Character>> GetAll()
