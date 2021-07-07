@@ -1,11 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "E/WFMPmxQ3FHe/cRLJSw3eiLY9kuGCBa+V0q7lsn+S2tTCxCGF+tdOSzADht6MUL4eFmikkYUh4Nc/N2ElMncg==",
+  "dgSpecHash": "tqEiwVK++wpOqTh0kNlQI+UW3PDIJXBzUHfj7DJdEr3jsVyo6sCmpbiQ+e9cQwEJCw5UVyKk8oVpJ2Xv3og7iA==",
   "success": true,
   "projectFilePath": "C:\\Projects\\GgstResource\\GgstResource.DataAccess\\GgstResource.DataAccess.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Chris\\.nuget\\packages\\microsoft.extensions.configuration\\6.0.0-preview.5.21301.5\\microsoft.extensions.configuration.6.0.0-preview.5.21301.5.nupkg.sha512",
+    "C:\\Users\\Chris\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\6.0.0-preview.5.21301.5\\microsoft.extensions.configuration.abstractions.6.0.0-preview.5.21301.5.nupkg.sha512",
+    "C:\\Users\\Chris\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.0-preview.5.21301.5\\microsoft.extensions.primitives.6.0.0-preview.5.21301.5.nupkg.sha512",
     "C:\\Users\\Chris\\.nuget\\packages\\npgsql\\6.0.0-preview5\\npgsql.6.0.0-preview5.nupkg.sha512",
-    "C:\\Users\\Chris\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\5.0.0\\system.runtime.compilerservices.unsafe.5.0.0.nupkg.sha512"
+    "C:\\Users\\Chris\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0-preview.5.21301.5\\system.runtime.compilerservices.unsafe.6.0.0-preview.5.21301.5.nupkg.sha512"
   ],
   "logs": []
 }
